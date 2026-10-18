@@ -2,7 +2,7 @@
 
 Part of the unity-dev skill, read by the main thread together with [trace-agent.md](trace-agent.md), which holds the fields and the rules every agent follows.
 
-- **Where.** The main thread picks `<task-id>` at stage 0 (the date and a short slug) and writes `main.jsonl`, starting with `{"task":"<short title in the user's language>","skill":"unity-dev","profile":"fast|normal|deep"}` ([PROFILE] in [profiles.md](profiles.md)).
+- **Where.** The main thread picks `<task-id>` at stage 0 (the date and a short slug) and writes `main.jsonl`, starting with `{"task":"<short title in the user's language>","skill":"unity-dev","profile":"fast|normal|deep"}` ([PROFILE] in [profiles.md](profiles.md)). Create the trace for the mode question before confirmation without a `"profile"` value. After the answer or an explicit switch, append an updated header as a new line with the same `"task"` and the confirmed `"profile"`; keep earlier headers so finished stages retain their mode ([PROFILE]).
 
 **Fields only the main thread writes:**
 
@@ -40,7 +40,7 @@ Part of the unity-dev skill, read by the main thread together with [trace-agent.
 - [TRACE-SKIP] **A stage that doesn't run is still on the graph:** a stage node with `"st":"skip"` and the reason in `s`. Only the agent knows why a stage was skipped; without the node the user sees a gap in the stage numbers and can't tell a reason the skill allows from a missed step.
   - Examples: `{"id":"rnd","sg":"PIPE-RND","t":"R&D","st":"skip","s":"approach fixed by the user: reuse the existing cache"}`; the user said to pick the variant yourself → `{"id":"choice","sg":"PIPE-CHOICE","t":"Choice","st":"skip","s":"the user: pick and implement"}`; etc.
   - Anti-example: the trace goes from the facts straight to the review, with no node for the stages between them.
-- **The viewer checks** these citations in every finished stage and flags the ones no node in it has. A citation that names profiles is expected only when the trace header's `profile` is one of them ([PROFILE-STAGES] in [profiles.md](profiles.md)); a trace with no profile, or with one other than Fast, Normal or Deep, is checked against every citation:
+- **The viewer checks** these citations in every finished stage and flags the ones no node in it has. A citation that names profiles is expected only when the `profile` from the last header before that stage began is one of them ([PROFILE-STAGES] in [profiles.md](profiles.md)); a missing or unknown starting profile checks that stage against every citation. Old traces without mode history use their header value:
 
 | Stage | Expected citations |
 | --- | --- |

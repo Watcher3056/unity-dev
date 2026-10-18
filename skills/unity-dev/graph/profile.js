@@ -8,6 +8,16 @@
 (() => {
   TraceBoard.addProfile({
     id: 'unity-dev',
+    // Task depth belongs to the skill. The common board only renders and delivers these choices.
+    workModes: {
+      default: 'fast',
+      options: [
+        { value: 'fast', label: 'Fast (Recommended)' },
+        { value: 'normal', label: 'Normal' },
+        { value: 'deep', label: 'Deep (Preview; Not recommended!)' },
+      ],
+      message: (mode) => `Switch task profile to ${mode}. Apply it to the stages still ahead; keep completed stages. Update the trace header to the confirmed profile.`,
+    },
     // a trace of this skill: it says so in its first line, or its stages carry the pipeline's tags
     match: (model) => model.skill === 'unity-dev' || (model.nodes || []).some((n) => /^PIPE-/.test(String(n.sg || ''))),
     // stage tag → the board's role (gather: context, facts; found; choose: rnd, choice; do: impl; check: checks)
