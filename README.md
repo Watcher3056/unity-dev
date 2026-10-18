@@ -7,16 +7,13 @@
 An agent for Unity that reproduces the bug in Play Mode, weighs competing fixes, lets you pick one,<br>
 then re-tests in the same setup, before → after. You follow it in **Flow**, not in a wall of chat.
 
-[Install](#install) · [How it works](#how-it-works) · [Flow](#-flow-the-task-not-the-chat) · [FAQ](#faq)
+[At a glance](#at-a-glance) · [How it works](#how-it-works) · [Flow](#-flow-the-task-not-the-chat) · [Install](#install) · [FAQ](#faq)
 
 </div>
 
 <br>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/media/unity-hook-chat-dark.gif">
-  <img alt="This is your typical AI chat: code, logs and a long answer stream in, and the question the agent asked you hides mid-paragraph. This is Flow: the same popup bug as cards, three fixes, one click on B, checks in the game. Fix bugs in Flow, not in chat." src="docs/media/unity-hook-chat-light.gif" width="100%">
-</picture>
+<img alt="This is your typical AI chat: prose, code and logs stream in, and the question the agent asked you is one faint line among them. This is Flow: the same popup bug as a few cards, two fixes dropped, one chosen, one click, QA in the game passes. Fix bugs in Flow, not in chat." src="docs/media/unity-hook-chat.gif" width="100%">
 
 ## Why
 
@@ -28,6 +25,14 @@ then re-tests in the same setup, before → after. You follow it in **Flow**, no
 | ❌ Tweak a shared prefab or base class "while here" | ✅ Anything that changes behavior outside your scenario is your call |
 | ❌ Bury the work in a long chat | ✅ **Flow:** findings, options, your choice and the checks as cards you scan in seconds |
 | ❌ Answer with logs, diffs and a wall of text | ✅ **No fluff:** the answer first, in the game's words, then a picture as proof |
+
+## At a glance
+
+Short animations of what unity-dev does. The real interface is in [Flow](#-flow-the-task-not-the-chat) below.
+
+<img alt="It patched the first idea? Here three fixes stand side by side with what each fixes and risks; a critic breaks two, the judge recommends B, and one click picks it. Compare fixes. You pick." src="docs/media/unity-hook-pick.gif" width="100%">
+
+<img alt="“Fixed.” Is it? The chat says fixed, 0 errors; in the game, the second purchase popup won't close. In Flow, QA in the game finds it, the fix lands, QA again passes 4 of 4. “Fixed” only after it plays your game." src="docs/media/unity-hook-proof.gif" width="100%">
 
 ## How it works
 
@@ -46,8 +51,8 @@ Every task that touches the project runs the same stages: implement, debug, opti
 A chat with an agent grows into a wall of text you scroll back through. **Flow** lays the same task out as cards: what was found, the fixes side by side, the question that waits for you, what was checked.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/media/unity-hook-pick-dark.gif">
-  <img alt="It patched the first idea? Here three fixes stand side by side, each with what it fixes and what it risks; the question waits on its card and one click picks B. Compare fixes. You pick." src="docs/media/unity-hook-pick-light.gif" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/media/unity-flow-dark.gif">
+  <img alt="The real Flow, live: the popup bug is investigated, three fixes are compared, B is picked on the question's card, then review and Play Mode QA pass." src="docs/media/unity-flow-light.gif" width="100%">
 </picture>
 
 - **Decide where the choice is.** The question stands on the decision's card, the options' pros and cons right above it. One click answers.
@@ -57,15 +62,15 @@ A chat with an agent grows into a wall of text you scroll back through. **Flow**
 **Proof, not prose.** The checks come with their evidence: drag across the before → after, open a step's details beside the canvas.
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="docs/media/unity-hook-proof-dark.gif">
-  <img alt="“Fixed.” Is it? The chat says 0 errors, but the game never ran. In Flow, the QA card holds the game's before and after: drag across, 4 of 4 passed. Fixed only after it plays your game." src="docs/media/unity-hook-proof-light.gif" width="100%">
+  <source media="(prefers-color-scheme: dark)" srcset="docs/media/unity-proof-dark.gif">
+  <img alt="The real Flow: drag across the before/after picture of the QA round, then open the round's details: its plan, results and evidence." src="docs/media/unity-proof-light.gif" width="100%">
 </picture>
 
 - **More · Why? · How?** on every card: the step's plan, results, rules and evidence open beside it, the place on the canvas kept.
 - **Two more views when you need them.** **Decisions:** the reasoning graph, every step with its rule and evidence. **Tech:** what each agent did, with time and tokens.
 - **Local.** The viewer runs on your machine and opens with every Codex or Claude Code session. It is [FlowAI Graph](https://github.com/Watcher3056/flow-ai-graph), built into this plugin.
 
-<sub>Recorded from the actual viewer; the chat is a staged illustration. The popup scenario is a scripted demo replay with illustrative evidence, not a new Unity test run. Full recordings: [a whole task in Flow](docs/media/unity-flow-light.gif) · [the proof](docs/media/unity-proof-light.gif).</sub>
+<sub>The animations at the top are illustrations drawn for this page. The recordings in this section are the actual viewer; the popup scenario is a scripted demo replay with illustrative evidence, not a new Unity test run.</sub>
 
 ## Answers you get in 5 seconds
 

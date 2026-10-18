@@ -1,33 +1,23 @@
-# README recordings
+# README media
 
-`unity-hook-*` (light and dark) are the README's short hooks: a caption with the
-problem, the feature in the actual FlowAI Graph interface with the Unity-dev stage
-profile, and a closing line. The captions are drawn into the recorded page;
-nothing else is edited.
+Two kinds of clips, kept apart in the README.
 
-- `unity-hook-chat-*` and `unity-hook-proof-*` open on a **staged chat**: a
-  generic chat page written for the recording, not any real product's interface,
-  showing how the same popup bug reads as a long answer with code and logs, and
-  as a "fixed, 0 errors" that never ran the game. Everything after "This is Flow"
-  is the actual viewer.
-- `unity-hook-pick-*` is the actual viewer throughout.
+**Marketing animations** (`unity-hook-*.gif`): short motion-graphics illustrations
+drawn for the README, at the top and under "At a glance". They show the idea in
+simplified form: an abstract chat, a stylized shop game, a few cards, captions.
+They are not screenshots of the viewer, of a real chat product or of a real game.
+Each frame is rendered from a timeline at 20 frames per second.
 
-`unity-flow-*` and `unity-proof-*` are the full recordings the README links to.
+**Real recordings** (`unity-flow-*`, `unity-proof-*`, light and dark): the actual
+FlowAI Graph interface with the Unity-dev stage profile, captured on 2026-10-18
+from viewer files matching Graph source `59271d6`. The interface was not rebuilt or
+restyled. The popup scenario is a scripted Normal-mode demonstration: Flow is
+recorded while the trace grows, and the choice of fix is clicked on its question
+card. Its code, log excerpts and before → after pictures come from the retained
+Graph demo; the displayed check results are illustrative, not evidence of a new
+Unity test run. Only a pointer and click indicator are added to the browser frames.
 
-All were captured on 2026-10-18 from viewer files matching Graph source `59271d6`;
-the interface was not rebuilt or restyled. Parts of the hooks are sped up, the
-captions are not.
-
-The popup scenario is a scripted Normal-mode demonstration. Flow is recorded while
-the trace grows; the choice of fix is clicked on its question card. Its code, log
-excerpts and before → after pictures come from the retained Graph demo; the
-displayed check results are illustrative, not evidence of a new Unity test run.
-
-The camera pans and the cursor clicks real controls. Only a pointer and click
-indicator are added to the browser frames. Both themes use the viewer's own
-appearance settings.
-
-The `trace-*` GIFs remain as historical assets; they show the older interface,
-which is now the Decisions view.
+`thumbnail.jpg` and `pipeline.svg` are illustrations. The `trace-*` GIFs remain as
+historical assets; they show the older interface, which is now the Decisions view.
 
 See [asset provenance](../asset-provenance.md).
