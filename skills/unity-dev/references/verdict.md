@@ -2,6 +2,9 @@
 
 Part of the unity-dev skill, read by the main thread, R&D branches, critics, the audience critic and the judge (SKILL.md, **Skill files by role**). The criteria every branch is written to and the critics break it against, the bar the judge scores every core by, and how the comparison ends; the stage itself is in [rnd.md](rnd.md).
 
+- [RND-EVIDENCE] **Evidence rule.** A claim like "it's safe" without evidence counts as an **unknown risk, not a low one**.
+- [RND-OWN] **Only the branch's own problems count** ([HR-SCOPE], [SCOPE-WHOSE] in SKILL.md).
+
 ## Criteria
 
 - [RND-CRITERIA] **Always:**

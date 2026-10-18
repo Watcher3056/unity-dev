@@ -54,11 +54,10 @@ These inputs feed the directions; they are not a menu of fixed options.
    - "Which earlier fix or decision does it undo?"
    - "What would the team lead or the user reject, and why?"
    - "What gets worse for the product's user around the change: what they see, how it behaves or responds, how it is to use, etc.?"
+   - Assume the sketch is implemented exactly as described. Which drawbacks would remain? Report those as design limitations. For each remaining risk, name the uncertain causal link. A future test of severity or frequency does not make a known limitation uncertain.
    - Each finding gets a status and the level that established it ([FIND-STATUS] and [FIND-LEVEL] in [findings.md](findings.md)), and the critic checks its own findings where it can: code and asset files itself; Editor checks as [ONE-UNITY] allows; runs in Play Mode belong to the tester.
    - etc.
 
-   - [RND-EVIDENCE] **Evidence rule.** A claim like "it's safe" without evidence counts as an **unknown risk, not a low one**.
-   - [RND-OWN] **Only the branch's own problems count** ([HR-SCOPE], [SCOPE-WHOSE] in SKILL.md).
 7. [RND-LOOP] **Search → critique → revise loop.**
    - **Revise first.** The branch answers every shown finding on its core ([RND-RISK-COST]) with one of two: "fixed inside the direction: how, and what it took from where" or "not fixable without leaving the direction: why". A direction is its principle ([RND-DIRECTIONS]), not the rules of the code the branch found where its change goes (a check, a guard, an order of calls, etc.): changing one is inside it. A new direction comes from the second answer or from a shared assumption a critique flagged ([RND-FLAGGED]).
      - Example: the YAGNI branch finds the existing check rejecting legitimate retries → it changes the check to return the earlier result: fixed inside; etc. Anti-example: the critic shows that the validator the branch reuses rejects the new field's format; the branch keeps it as it is and answers "the direction can't carry this".
