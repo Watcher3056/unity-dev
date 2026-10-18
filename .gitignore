@@ -1,0 +1,19 @@
+# Generated builds and Python caches
+dist/
+__pycache__/
+*.py[cod]
+.dependencies/
+
+# Local task data, authoring configuration and credentials
+.ai-profile/
+/.claude/
+/.codex/
+/.mcp.json
+/AGENTS.md
+/CLAUDE.md
+benchmark/
+research/
+.env
+.env.*
+!.env.example
+!trace-viewer/demo/Logs/popup.log

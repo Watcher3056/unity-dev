@@ -1,0 +1,4 @@
+interface:
+  display_name: "Unity Dev"
+  short_description: "Unity implement, debug, optimize, review"
+  default_prompt: "Use $unity-dev to investigate this Unity bug and show me the cause with evidence."

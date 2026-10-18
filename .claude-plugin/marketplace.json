@@ -1,0 +1,13 @@
+{
+  "name": "unity-dev",
+  "owner": {
+    "name": "Watcher3056"
+  },
+  "plugins": [
+    {
+      "name": "unity-dev",
+      "source": "./dist/claude/unity-dev",
+      "description": "An AI skill pipeline for Unity development, with a pinned FlowAI Graph dependency."
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 26 880 200" width="880" height="200" role="img" aria-label="unity-dev pipeline: Scout, Facts, R&amp;D, You choose, Implement, Review, QA in game, Done. A failed QA or a real review finding ends the round with a report; you pick the next round.">
+  <style>
+    :root { --fg: #1f2328; --sub: #59636e; --bg: #ffffff; --ok: #1a7f37; --line: #2da44e; --back: #cf222e; --you: #9a6700; --youbg: #fff8c5; }
+    @media (prefers-color-scheme: dark) {
+      :root { --fg: #e6edf3; --sub: #9198a1; --bg: #0d1117; --ok: #3fb950; --line: #2ea043; --back: #f85149; --you: #d29922; --youbg: #2e2a12; }
+    }
+    text { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif; text-anchor: middle; }
+    .name { font-size: 15px; font-weight: 600; fill: var(--fg); }
+    .sub { font-size: 13px; fill: var(--sub); }
+    .emoji { font-size: 17px; font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif; dominant-baseline: central; }
+    .main { stroke: var(--line); stroke-width: 3; fill: none; }
+    .st { fill: var(--bg); stroke: var(--line); stroke-width: 2.5; }
+    .you { fill: var(--youbg); stroke: var(--you); stroke-width: 2.5; }
+    .youname { fill: var(--you); }
+    .done { fill: var(--ok); stroke: var(--ok); stroke-width: 2.5; }
+    .check { stroke: var(--bg); stroke-width: 3; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+    .arc { stroke: var(--back); stroke-width: 2; stroke-dasharray: 6 5; fill: none; }
+    .head { fill: var(--back); }
+    .pill { fill: var(--bg); }
+    .lbl { font-size: 13px; font-weight: 600; fill: var(--back); }
+  </style>
+  <defs>
+    <marker id="h" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path class="head" d="M0,0 L10,5 L0,10 z"/>
+    </marker>
+  </defs>
+
+  <!-- back arcs: a real review finding or a failed QA goes back to facts / R&D -->
+  <path class="arc" d="M715,131 C715,22 220,22 220,128" marker-end="url(#h)"/>
+  <path class="arc" d="M605,131 C605,74 220,74 220,128" marker-end="url(#h)"/>
+  <rect class="pill" x="347" y="34" width="240" height="22" rx="11"/>
+  <text class="lbl" x="467" y="50">QA failed → report, you pick</text>
+  <rect class="pill" x="347" y="77" width="130" height="22" rx="11"/>
+  <text class="lbl" x="412" y="93">real review finding</text>
+
+  <!-- the line -->
+  <path class="main" d="M55,150 H825"/>
+
+  <!-- stations -->
+  <g>
+    <circle class="st" cx="55" cy="150" r="18"/><text class="emoji" x="55" y="151">🔍</text>
+    <text class="name" x="55" y="195">Scout</text><text class="sub" x="55" y="214">maps the chain</text>
+  </g>
+  <g>
+    <circle class="st" cx="165" cy="150" r="18"/><text class="emoji" x="165" y="151">🧪</text>
+    <text class="name" x="165" y="195">Facts</text><text class="sub" x="165" y="214">parallel agents</text>
+  </g>
+  <g>
+    <circle class="st" cx="275" cy="150" r="18"/><text class="emoji" x="275" y="151">⚖️</text>
+    <text class="name" x="275" y="195">R&amp;D</text><text class="sub" x="275" y="214">competing fixes</text>
+  </g>
+  <g>
+    <circle class="you" cx="385" cy="150" r="20"/><text class="emoji" x="385" y="151">🙋</text>
+    <text class="name youname" x="385" y="195">You choose</text><text class="sub" x="385" y="214">no code before</text>
+  </g>
+  <g>
+    <circle class="st" cx="495" cy="150" r="18"/><text class="emoji" x="495" y="151">🛠️</text>
+    <text class="name" x="495" y="195">Implement</text><text class="sub" x="495" y="214">your pick only</text>
+  </g>
+  <g>
+    <circle class="st" cx="605" cy="150" r="18"/><text class="emoji" x="605" y="151">👀</text>
+    <text class="name" x="605" y="195">Review</text><text class="sub" x="605" y="214">another agent</text>
+  </g>
+  <g>
+    <circle class="st" cx="715" cy="150" r="18"/><text class="emoji" x="715" y="151">🎮</text>
+    <text class="name" x="715" y="195">QA in game</text><text class="sub" x="715" y="214">before → after</text>
+  </g>
+  <g>
+    <circle class="done" cx="825" cy="150" r="18"/><path class="check" d="M816,150 l6,6 l11,-12"/>
+    <text class="name" x="825" y="195">Done</text><text class="sub" x="825" y="214">only after QA</text>
+  </g>
+</svg>

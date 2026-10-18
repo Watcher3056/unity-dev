@@ -1,0 +1,189 @@
+{
+  "_doc": "What each sub-agent role leaves out of its files (tools/role_digests.py). The files come from the Skill files by role table in SKILL.md; everything not listed here reaches the role. main_only: blocks only the main thread needs.",
+  "main_only": [
+    "SKILL.md#(start)",
+    "SKILL.md#Skill files by role (hard rule)",
+    "SKILL.md#PIPE-KNOWLEDGE",
+    "SKILL.md#AUTONOMY",
+    "SKILL.md#PIPE-EXCEPTIONS",
+    "SKILL.md#PIPE-PARTIAL",
+    "SKILL.md#Action mode (hard rule)",
+    "SKILL.md#ACTION-MODE",
+    "SKILL.md#Mode references",
+    "references/agents.md#MAIN-WAITS",
+    "references/agents.md#MAIN-QUIET",
+    "references/agents.md#PRESETS",
+    "references/agents.md#AGENT-LIMIT",
+    "references/agents.md#BRIEF",
+    "references/agents.md#TASK-DOC"
+  ],
+  "roles": {
+    "tester": {
+      "row": "Tester",
+      "exclude": [
+        "SKILL.md#PIPE-CHOICE",
+        "SKILL.md#HR-DEPS",
+        "SKILL.md#HR-GIT",
+        "SKILL.md#HR-THIRD-PARTY",
+        "SKILL.md#Directions"
+      ]
+    },
+    "reviewer": {
+      "row": "Reviewer",
+      "exclude": [
+        "SKILL.md#PIPE-CHOICE",
+        "references/directions.md#RND-EXISTING",
+        "references/directions.md#DIR-USUAL",
+        "references/play-mode.md#PM-WHERE",
+        "references/play-mode.md#PM-LEVELS",
+        "references/play-mode.md#PM-OWN-SCENE",
+        "references/play-mode.md#PM-START",
+        "references/play-mode.md#STAND-PREP",
+        "references/play-mode.md#PM-STAND",
+        "references/play-mode.md#PM-BUILD",
+        "references/play-mode.md#PM-DRIVER",
+        "references/play-mode.md#PM-WAIT-ONCE",
+        "references/play-mode.md#PM-SESSION",
+        "references/play-mode.md#PM-LANES",
+        "references/play-mode.md#PM-STUCK",
+        "references/play-mode.md#PM-SETUP-STAYS",
+        "references/play-mode.md#PM-REPRO-IS-QA",
+        "references/play-mode.md#PM-OBSTACLE"
+      ]
+    },
+    "branch": {
+      "row": "R&D branch",
+      "exclude": [
+        "SKILL.md#PIPE-REVIEW",
+        "SKILL.md#TECH-BLOCKERS",
+        "SKILL.md#HR-GIT",
+        "references/play-mode.md#PM-OWN-SCENE",
+        "references/play-mode.md#PM-BUILD",
+        "references/play-mode.md#Observe through logs, act through commands",
+        "references/play-mode.md#PM-COMMANDS",
+        "references/play-mode.md#PM-DRIVER",
+        "references/play-mode.md#PM-WAIT-ONCE",
+        "references/play-mode.md#PM-OUTPUT",
+        "references/play-mode.md#PM-COMPILE",
+        "references/play-mode.md#Run it efficiently",
+        "references/play-mode.md#PM-SESSION",
+        "references/play-mode.md#PM-LANES",
+        "references/play-mode.md#PM-STUCK",
+        "references/play-mode.md#PM-SETUP-STAYS",
+        "references/play-mode.md#PM-OBSTACLE"
+      ]
+    },
+    "critic": {
+      "row": "Critic, judge",
+      "exclude": [
+        "SKILL.md#PIPE-REVIEW",
+        "SKILL.md#TECH-BLOCKERS",
+        "SKILL.md#HR-GIT",
+        "SKILL.md#HR-DIAG",
+        "references/trace-agent.md#TRACE-EVIDENCE"
+      ]
+    },
+    "audience": {
+      "row": "Audience critic",
+      "exclude": [
+        "SKILL.md#Directions",
+        "SKILL.md#HR-DEPS",
+        "SKILL.md#HR-THIRD-PARTY",
+        "SKILL.md#PIPE-REVIEW",
+        "SKILL.md#TECH-BLOCKERS",
+        "SKILL.md#HR-GIT",
+        "SKILL.md#HR-DIAG",
+        "references/trace-agent.md#TRACE-EVIDENCE"
+      ]
+    },
+    "spec": {
+      "row": "Spec critic",
+      "exclude": [
+        "SKILL.md#PIPE-REVIEW",
+        "SKILL.md#PIPE-QA",
+        "SKILL.md#TECH-BLOCKERS",
+        "SKILL.md#HR-DEPS",
+        "SKILL.md#HR-GIT",
+        "SKILL.md#HR-THIRD-PARTY",
+        "SKILL.md#HR-DIAG",
+        "SKILL.md#Directions",
+        "references/trace-agent.md#TRACE-EVIDENCE"
+      ]
+    },
+    "fact": {
+      "row": "Fact agent, verifier",
+      "exclude": [
+        "SKILL.md#PIPE-CHOICE",
+        "SKILL.md#PIPE-REVIEW",
+        "SKILL.md#PIPE-QA",
+        "SKILL.md#TECH-BLOCKERS",
+        "SKILL.md#HR-DEPS",
+        "SKILL.md#HR-GIT",
+        "SKILL.md#HR-THIRD-PARTY",
+        "SKILL.md#Directions"
+      ]
+    },
+    "scout": {
+      "row": "Scout",
+      "exclude": [
+        "SKILL.md#PIPE-CHOICE",
+        "SKILL.md#PIPE-REVIEW",
+        "SKILL.md#PIPE-QA",
+        "SKILL.md#TECH-BLOCKERS",
+        "SKILL.md#HR-DEPS",
+        "SKILL.md#HR-GIT",
+        "SKILL.md#HR-THIRD-PARTY",
+        "SKILL.md#Directions"
+      ]
+    },
+    "profile": {
+      "row": "Profile agent",
+      "exclude": [
+        "SKILL.md#PIPE-FACTS",
+        "SKILL.md#PIPE-RND",
+        "SKILL.md#PIPE-CHOICE",
+        "SKILL.md#PIPE-REVIEW",
+        "SKILL.md#PIPE-QA",
+        "SKILL.md#TECH-BLOCKERS",
+        "SKILL.md#HR-SCOPE",
+        "SKILL.md#HR-DEPS",
+        "SKILL.md#HR-VERIFY-LEVEL",
+        "SKILL.md#HR-GIT",
+        "SKILL.md#HR-THIRD-PARTY",
+        "SKILL.md#HR-DIAG",
+        "SKILL.md#Directions",
+        "references/trace-agent.md#TRACE-EVIDENCE"
+      ]
+    },
+    "recipe": {
+      "row": "Recipe agent, tool agent",
+      "exclude": [
+        "SKILL.md#PIPE-CHOICE",
+        "SKILL.md#PIPE-REVIEW",
+        "SKILL.md#PIPE-QA",
+        "SKILL.md#HR-DEPS",
+        "SKILL.md#HR-GIT",
+        "SKILL.md#HR-THIRD-PARTY",
+        "SKILL.md#Directions",
+        "SKILL.md#TECH-BLOCKERS",
+        "references/play-mode.md#PM-BUILD",
+        "references/play-mode.md#PM-COMMANDS",
+        "references/play-mode.md#PM-WAIT-ONCE",
+        "references/play-mode.md#PM-COMPILE",
+        "references/play-mode.md#Run it efficiently",
+        "references/play-mode.md#PM-SESSION",
+        "references/play-mode.md#PM-LANES",
+        "references/play-mode.md#PM-STUCK",
+        "references/play-mode.md#PM-OBSTACLE"
+      ]
+    },
+    "implementer": {
+      "row": "Implementer, plan checker",
+      "exclude": [
+        "SKILL.md#PIPE-CHOICE",
+        "references/directions.md#RND-EXISTING",
+        "references/directions.md#DIR-USUAL"
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "hooks": {
+    "SubagentStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c \"import os,glob,runpy;r=os.environ['PLUGIN_ROOT'];p=os.path.join(r,'scripts','skill_hooks.py');p=p if os.path.exists(p) else sorted(glob.glob(os.path.join(os.path.dirname(r.rstrip('/'+os.sep)),'*','scripts','skill_hooks.py')))[-1];runpy.run_path(p,run_name='__main__')\"",
+            "commandWindows": "$py=@(Get-Command python,python3 -CommandType Application -ErrorAction SilentlyContinue|Where-Object{$_.Source -notlike '*\\WindowsApps\\*'})[0];$a=@();if($py){$py=$py.Source}else{$py=Join-Path $env:USERPROFILE '.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe';if(-not(Test-Path $py)){$py='py';$a=@('-3')}};& $py @a -c \"import os,glob,runpy;r=os.environ['PLUGIN_ROOT'];p=os.path.join(r,'scripts','skill_hooks.py');p=p if os.path.exists(p) else sorted(glob.glob(os.path.join(os.path.dirname(r.rstrip('/'+os.sep)),'*','scripts','skill_hooks.py')))[-1];runpy.run_path(p,run_name='__main__')\";exit $LASTEXITCODE",
+            "timeout": 15,
+            "statusMessage": "AI skills: naming the files of the sub-agent's role"
+          }
+        ]
+      }
+    ],
+    "SubagentStop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c \"import os,glob,runpy;r=os.environ['PLUGIN_ROOT'];p=os.path.join(r,'scripts','skill_hooks.py');p=p if os.path.exists(p) else sorted(glob.glob(os.path.join(os.path.dirname(r.rstrip('/'+os.sep)),'*','scripts','skill_hooks.py')))[-1];runpy.run_path(p,run_name='__main__')\"",
+            "commandWindows": "$py=@(Get-Command python,python3 -CommandType Application -ErrorAction SilentlyContinue|Where-Object{$_.Source -notlike '*\\WindowsApps\\*'})[0];$a=@();if($py){$py=$py.Source}else{$py=Join-Path $env:USERPROFILE '.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe';if(-not(Test-Path $py)){$py='py';$a=@('-3')}};& $py @a -c \"import os,glob,runpy;r=os.environ['PLUGIN_ROOT'];p=os.path.join(r,'scripts','skill_hooks.py');p=p if os.path.exists(p) else sorted(glob.glob(os.path.join(os.path.dirname(r.rstrip('/'+os.sep)),'*','scripts','skill_hooks.py')))[-1];runpy.run_path(p,run_name='__main__')\";exit $LASTEXITCODE",
+            "timeout": 15,
+            "statusMessage": "AI skills: checking the sub-agent read the files of its role"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 -c \"import os,glob,runpy;r=os.environ['PLUGIN_ROOT'];p=os.path.join(r,'scripts','skill_hooks.py');p=p if os.path.exists(p) else sorted(glob.glob(os.path.join(os.path.dirname(r.rstrip('/'+os.sep)),'*','scripts','skill_hooks.py')))[-1];runpy.run_path(p,run_name='__main__')\"",
+            "commandWindows": "$py=@(Get-Command python,python3 -CommandType Application -ErrorAction SilentlyContinue|Where-Object{$_.Source -notlike '*\\WindowsApps\\*'})[0];$a=@();if($py){$py=$py.Source}else{$py=Join-Path $env:USERPROFILE '.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe';if(-not(Test-Path $py)){$py='py';$a=@('-3')}};& $py @a -c \"import os,glob,runpy;r=os.environ['PLUGIN_ROOT'];p=os.path.join(r,'scripts','skill_hooks.py');p=p if os.path.exists(p) else sorted(glob.glob(os.path.join(os.path.dirname(r.rstrip('/'+os.sep)),'*','scripts','skill_hooks.py')))[-1];runpy.run_path(p,run_name='__main__')\";exit $LASTEXITCODE",
+            "timeout": 15,
+            "statusMessage": "AI skills: checking the skill's reminders"
+          }
+        ]
+      }
+    ]
+  }
+}

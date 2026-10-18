@@ -1,0 +1,3 @@
+[submodule "vendor/flow-ai-graph"]
+	path = vendor/flow-ai-graph
+	url = ../flow-ai-graph

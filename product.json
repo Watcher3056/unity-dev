@@ -1,0 +1,9 @@
+{
+  "name": "unity-dev",
+  "displayName": "Unity Dev",
+  "description": "An AI skill pipeline for Unity development, with a pinned FlowAI Graph dependency.",
+  "shortDescription": "Unity development pipeline",
+  "kind": "skill",
+  "skill": "unity-dev",
+  "graph": true
+}
