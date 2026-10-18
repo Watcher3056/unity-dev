@@ -32,7 +32,7 @@ Short animations of what unity-dev does. The real interface is in [Flow](#-flow-
 
 <img alt="It patched the first idea? Here three fixes stand side by side with what each fixes and risks; a critic breaks two, the judge recommends B, and one click picks it. Compare fixes. You pick." src="docs/media/unity-hook-pick.gif" width="100%">
 
-<img alt="“Fixed.” Is it? The chat says fixed, 0 errors; in the game, the second purchase popup won't close. In Flow, QA in the game finds it, the fix lands, QA again passes 4 of 4. “Fixed” only after it plays your game." src="docs/media/unity-hook-proof.gif" width="100%">
+<img alt="“Fixed.” Is it? The chat says fixed, 0 errors; in the game, the knight steps on the bridge, it collapses and he falls into the river. In Flow, QA in the game catches it, the fix lands, QA again passes, and a before → after picture proves it. “Fixed” only after it plays your game." src="docs/media/unity-hook-proof.gif" width="100%">
 
 ## How it works
 

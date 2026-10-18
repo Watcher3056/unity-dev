@@ -4,7 +4,7 @@ Two kinds of clips, kept apart in the README.
 
 **Marketing animations** (`unity-hook-*.gif`): short motion-graphics illustrations
 drawn for the README, at the top and under "At a glance". They show the idea in
-simplified form: an abstract chat, a stylized shop game, a few cards, captions.
+simplified form: an abstract chat, a stylized bridge game, a few cards, captions.
 They are not screenshots of the viewer, of a real chat product or of a real game.
 Each frame is rendered from a timeline at 20 frames per second.
 
