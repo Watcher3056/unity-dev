@@ -105,7 +105,9 @@ class SkillBuildTests(unittest.TestCase):
         fixture = ARTIFACTS / name
         subprocess.run(["git", "clone", "--quiet", "--no-local", str(REPO), str(fixture)], check=True)
         if initialize:
-            subprocess.run(["git", "-c", "protocol.file.allow=always", "-C", str(fixture), "submodule", "update", "--init"], check=True, capture_output=True)
+            subprocess.run(["git", "-c", "protocol.file.allow=always",
+                            "-c", f"submodule.vendor/flow-ai-graph.url={REPO / 'vendor/flow-ai-graph'}",
+                            "-C", str(fixture), "submodule", "update", "--init"], check=True, capture_output=True)
         return fixture
 
     def dependency_build_fails(self, fixture, expected):
