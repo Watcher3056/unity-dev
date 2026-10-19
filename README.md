@@ -1,6 +1,6 @@
 <div align="center">
 
-<img alt="Unity Dev for Codex and Claude Code: plays your game before it says fixed. It compiles (0 errors, yet the bridge collapses and the knight falls into the river) → it works (Play Mode QA 4/4 passed, the bridge holds and the knight runs across)." src="docs/media/thumbnail.jpg" width="100%">
+<img alt="Unity Dev: plays your game before it says fixed. It compiles (0 errors, yet the bridge collapses and the knight falls into the river) → it works (Play Mode QA 4/4 passed, the bridge holds and the knight runs across)." src="docs/media/thumbnail.jpg" width="100%">
 
 <br>
 
